@@ -1,0 +1,10 @@
+---
+- name: Update all VMs
+  hosts: all_hosts
+  become: yes
+  tasks:
+
+    - name: Update all packages
+      dnf:
+        name: "*"
+        state: latest
