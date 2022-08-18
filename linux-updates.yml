@@ -1,6 +1,6 @@
 ---
 - name: Update all VMs
-  hosts: all_hosts
+  hosts: all
   become: yes
   tasks:
 
