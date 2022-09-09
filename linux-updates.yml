@@ -1,10 +1,11 @@
 ---
 - name: Update all VMs
   hosts: all
+  become: true
+  gather_facts: true
   tasks:
 
     - name: Update all packages
-      become: yes
       dnf:
         name: "*"
         state: latest
