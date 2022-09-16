@@ -4,11 +4,10 @@
   become: true
   gather_facts: true
   tasks:
-
-- name: Update all packages
-  dnf:
-    name: "*"
-    state: latest
+    - name: Update all packages
+      dnf:
+        name: "*"
+        state: latest
         
-- name: Reboot
-  reboot:
+    - name: Reboot
+      reboot:
