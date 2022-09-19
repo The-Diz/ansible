@@ -1,0 +1,19 @@
+---
+#roles:
+#  # Install a role from Ansible Galaxy.
+#  - name: ansible.windows
+#    version: 1.9.6
+
+collections:
+  # Install a collection from Ansible Galaxy.
+  - name: ansible.windows
+    version: 0.9.3
+    source: https://galaxy.ansible.com
+    
+ - name: Install all security, critical, and rollup updates without a scheduled task
+  ansible.windows.win_updates:
+    category_names:
+      - SecurityUpdates
+      - CriticalUpdates
+      - UpdateRollups
+    reboot: yes
