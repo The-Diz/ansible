@@ -9,4 +9,4 @@
     tasks:
       - name: Update Portainer 
         local_action: cd /home/mitch/Docker/Portainer
-        local_action: docker-compose pull && docker-compose up -d
+        local_action: command docker-compose pull && docker-compose up -d
