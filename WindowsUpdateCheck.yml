@@ -1,5 +1,0 @@
-- hosts: all
-  ansible.windows.win_updates:
-    category_names: SecurityUpdates
-    state: searched
-    log_path: C:\ansible_wu.txt
